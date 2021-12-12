@@ -35,13 +35,13 @@ ORDER BY COUNT(title) DESC;
 SELECT * FROM retiring_titles;
 
 --Deliverable 2: The Employees Eligible for the Mentorship Program
-select distinct on (e.emp_no) 
-	e.emp_no, 
-	e.first_name, 
-	e.last_name,
-	e.birth_date,
-	de.from_date, 
-	de.to_date,
+SELECT DISTINCT ON (e.emp_no) 
+e.emp_no, 
+e.first_name, 
+e.last_name,
+e.birth_date,
+de.from_date, 
+de.to_date,
 	t.title
 INTO mentorship_eligibility
 FROM employees as e
